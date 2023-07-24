@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s;
+  background-color: #4f8ac1f5;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170px;
+  overflow: hidden;
+  height: 60px;
+  border-radius: 100px;
+  z-index: 999;
+}
+
+body:has(input[type='checkbox']:checked) {
+  background-color: #181e32f1;
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  box-shadow: inset 0px 0px 9px #0606069e;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1100px;
+  width: 100%;
+  height: 100%;
+}
+.btn-bg {
+  position: relative;
+  transition: all 0.5s;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 200%;
+  background-color: #4f8ac1;
+}
+
+label {
+  position: absolute;
+  z-index: 99999999;
+  width: 100%;
+  height: 100%;
+}
+
+input[type='checkbox']:checked ~ .round {
+  left: 115px;
+}
+input[type='checkbox']:checked ~ .round > .moon {
+  z-index: 9999;
+  transform: translateX(0);
+}
+input[type='checkbox']:checked ~ .btn-bg {
+  transform: translateY(0);
+  background-color: #181e32;
+}
+input[type='checkbox']:checked ~ .btn-bg > .dark-sky > .star-group {
+  opacity: 1;
+}
+
+.cloud-group,
+.dark-sky {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 50%;
+  transition: all 0.2s;
+}
+
+@keyframes light {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0.4;
+  }
+}
+
+.star-group {
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.star {
+  position: absolute;
+  border-radius: 100%;
+  background-color: #fff;
+  width: 10px;
+  z-index: 888;
+  box-sizing: border-box;
+  height: 11px;
+}
+.part {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.part::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 6px;
+  height: 7px;
+  background-color: #181e32;
+  border-radius: 0 0 8px 0;
+}
+.part::before {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 6px;
+  height: 7px;
+  background-color: #181e32;
+  border-radius: 0 0 0 8px;
+}
+.part1::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  background-color: #181e32;
+  border-radius: 0 13px 0 0;
+}
+.part1::before {
+  content: '';
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  background-color: #181e32;
+  border-radius: 11px 0 0 0;
+}
+
+.s {
+  transform: scale(0.4);
+  left: 21px px;
+  top: 6px;
+  animation: 0.8s ease-out 0s infinite alternate light;
+}
+.s1 {
+  transform: scale(0.6);
+  left: 6px;
+  top: 15px;
+  animation: 0.8s ease-out 0s infinite alternate light;
+}
+.s2 {
+  transform: scale(0.4);
+  left: 14px;
+  top: 24px;
+  animation: 0.6s ease-out 0s infinite alternate light;
+}
+.s3 {
+  transform: scale(0.4);
+  animation: 1.3s ease-out 0s infinite alternate light;
+
+  left: 25px;
+  top: 43px;
+}
+.s4 {
+  transform: scale(0.6);
+  animation: 1.2s ease-out 0s infinite alternate light;
+
+  left: 32px;
+  top: 21px;
+}
+.s5 {
+  transform: scale(0.8);
+  animation: 1.6s ease-out 0s infinite alternate light;
+
+  left: 40px;
+  top: 7px;
+}
+.s6 {
+  transform: scale(0.5);
+  animation: 0.8s ease-out 0s infinite alternate light;
+
+  left: 47px;
+  top: 33px;
+}
+.s7 {
+  transform: scale(0.4);
+  animation: 1.3s ease-out 0s infinite alternate light;
+
+  left: 86px;
+  top: 13px;
+}
+.s8 {
+  transform: scale(0.6);
+  animation: 0.7s ease-out 0s infinite alternate light;
+
+  left: 69px;
+  top: 32px;
+}
+.s9 {
+  transform: scale(0.9);
+  animation: 1.5s ease-out 0s infinite alternate light;
+
+  left: 77px;
+  top: 45px;
+}
+.s10 {
+  transform: scale(0.8);
+  animation: 0.8s ease-out 0s infinite alternate light;
+
+  left: 98px;
+  top: 23px;
+}
+.s11 {
+  transform: scale(0.5);
+  animation: 0.6s ease-out 0s infinite alternate light;
+
+  left: 96px;
+  top: 43px;
+}
+.s12 {
+  transform: scale(0.4);
+  animation: 1.4s ease-out 0s infinite alternate light;
+
+  left: 55px;
+  top: 45px;
+}
+.s13 {
+  transform: scale(0.6);
+  animation: 0.9s ease-out 0s infinite alternate light;
+
+  left: 105px;
+  top: 2px;
+}
+.s14 {
+  transform: scale(0.5);
+  animation: 0.8s ease-out 0s infinite alternate light;
+
+  left: 62px;
+  top: 15px;
+}
+
+.round {
+  position: absolute;
+  transition: all 0.5s;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  z-index: 99999;
+  overflow: hidden;
+  border-radius: 100%;
+  box-shadow: 0px 0px 0px 15px rgba(255, 255, 255, 0.1), 0px 0px 0px 35px rgba(255, 255, 255, 0.1),
+    0px 0px 0px 50px rgba(255, 255, 255, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.36);
+}
+.sun {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  border-radius: 100%;
+  background-color: #ffc223;
+  box-shadow: inset 3px 2px 2px rgba(255, 255, 255, 0.61), inset -2px -2px 8px rgba(0, 0, 0, 0.42);
+}
+
+.moon {
+  position: absolute;
+  transition: all 0.6s;
+  z-index: 0;
+  top: 0;
+  transform: translateX(100%);
+  opacity: 1;
+  width: 100%;
+  border-radius: 100%;
+  height: 100%;
+  background-color: #c2c8cd;
+  box-shadow: inset 3px 2px 1px rgba(255, 255, 255, 0.55), inset -2px -2px 1px rgba(0, 0, 0, 0.52);
+}
+
+.pit,
+.pit2,
+.pit3 {
+  position: absolute;
+  top: 16px;
+  left: 6px;
+  width: 17px;
+  border-radius: 50%;
+  height: 17px;
+  background-color: #959fb3;
+  box-shadow: inset 0px 0px 3px rgb(0 0 0 / 34%), 1px 1px 1px rgb(0 0 0 / 34%), inset -2px -2px 2px rgb(0 0 0 / 34%);
+}
+.pit2,
+.pit3 {
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  left: 24px;
+}
+.pit3 {
+  top: 29px;
+  left: 27px;
+}
+
+.cloud,
+.cloud2 {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 888;
+  transition: all 0.5s;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 39px 67px 0 16px rgba(255, 255, 255, 1), 63px 62px 0 16px rgba(255, 255, 255, 1),
+    89px 46px 0 15px rgba(255, 255, 255, 1), 123px 51px 0 20px rgba(255, 255, 255, 1),
+    156px 20px 0 20px rgba(255, 255, 255, 1);
+}
+.cloud {
+  animation: 2s ease-out 0s infinite alternate cloud;
+}
+
+.cloud2 {
+  top: 0px;
+  animation: 4s ease-out 0s infinite alternate cloud;
+  left: -23px;
+  opacity: 0.5;
+  box-shadow: 39px 67px 0 16px rgba(255, 255, 255, 0.5), 63px 62px 0 16px rgba(255, 255, 255, 1),
+    87px 38px 0 14px rgba(255, 255, 255, 1), 116px 37px 0 12px rgba(255, 255, 255, 1),
+    136px 29px 0 11px rgba(255, 255, 255, 1), 164px 24px 0 17px rgba(255, 255, 255, 1);
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-7px);
+  }
+}
